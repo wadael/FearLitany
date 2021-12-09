@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAB209"
+    android:background="@drawable/dunepainbox2"
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:id="@+id/whole"
     >
+    <!-- -->
 
     <TextView
         android:id="@+id/spacer0"
@@ -35,11 +36,11 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="#CF1111"
             android:fontFamily="@font/comfortaa_light"
-            android:text="Hello World!"
+            android:text="Fear Litany"
             android:textAlignment="center"
-            android:textSize="34sp"
+            android:textColor="@color/black"
 
-            />
+            android:textSize="34sp" />
     </LinearLayout>
 
 

@@ -13,52 +13,49 @@ public class MainActivity extends AppCompatActivity {
 
     Animation fade = null;
     TextView tv = null;
-
     String text = null;
     int verse = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        // getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        fade = AnimationUtils.loadAnimation(this, R.anim.fade);
-
-        /*
+        final Animation fade = AnimationUtils.loadAnimation(this, R.anim.fade);
         final Animation fadein = AnimationUtils.loadAnimation(this, R.anim.fadein);
-        final Animation fadeout = AnimationUtils.loadAnimation(this, R.anim.fadeout);
-        */
 
-        //  LinearLayout whole = findViewById(R.id.whole);
         tv = findViewById(R.id.text);
         Integer nb = getResources().getInteger(R.integer.scount);
 
         fade.setAnimationListener(
-                new Animation.AnimationListener(){
+                new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
-                        int resId = getResources().getIdentifier("s" + verse, "string", getPackageName());
-                        String s = getString(resId);
-                        tv.setText(s);
+
+                        int resId = getResources().getIdentifier("s" + verse++, "string", getPackageName());
+                        text = getString(resId);
+                        tv.setText(text);
+
                     }
 
                     @Override
-                    public void onAnimationRepeat(Animation animation) {}
+                    public void onAnimationRepeat(Animation animation) {
+                    }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        verse++;
-                        fade.reset();
-
-                        if(verse<=nb) tv.startAnimation(fade);
+                        fade.cancel();
+                        if (verse < nb+1) {
+                            tv.startAnimation(fade);
+                        }
+                        else {
+                            if (verse == nb+1) {
+                                tv.startAnimation(fadein);
+                            }
+                        }
                     }
-
                 }
         );
-
         tv.startAnimation(fade);
-
-        }
     }
+}

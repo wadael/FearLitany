@@ -1,0 +1,16 @@
+
+<resources>
+    <string name="app_name">Litanie contre la peur</string>
+    <integer name="scount">7</integer>
+
+    <string name="s1">Je ne connais pas la peur, car la peur tue l\'esprit. </string>
+    <string name="s2">La peur est la petite mort qui conduit à l\'oblitération totale.</string>
+    <string name="s3">J\'affronterai ma peur.</string>
+    <string name="s4">Je lui permettrai de passer sur moi, au travers de moi. </string>
+    <string name="s5">Et lorsqu\'elle sera passée, je tournerai mon oeil intérieur sur son chemin. </string>
+    <string name="s6">Et là où elle sera passée, il n\'y aura plus rien.</string>
+    <string name="s7">Rien que moi</string>
+
+    <!-- pour eviter build issue sur le nombre de textes à traduire -->
+    <string name="s8">Rien que moi2</string>
+</resources>

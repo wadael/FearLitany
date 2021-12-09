@@ -13,3 +13,11 @@ This app CAN be used as a starting point for a richer version that would include
 -- speed (slider for a multiplier)
 - ...
 
+
+2021/12/09 :
+- added French translation
+- corrected missed sentences
+- added homemade background
+
+
+
